@@ -1,0 +1,17 @@
+$main-color1: black;
+$main-color2: white;
+$main-color3: #029491;
+$secondary-color1: #FFB64F;
+$secondary-color2: #7CE3E1;
+$secondary-color3: #5970FF;
+
+@mixin btn {
+    background-color: $secondary-color3;
+    border-radius: 5px;
+    color: $main-color2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.04);
+    }
+}

@@ -1,0 +1,206 @@
+@import './../../../variables.scss';
+
+.tariff {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.20);
+    &:nth-child(1) {
+        .top {
+            background-color: $secondary-color1;
+        }
+        &.active {
+            border: 2px solid $secondary-color1;
+        }
+    }
+    &:nth-child(2) {
+        .top {
+            background-color: $secondary-color2;
+        }
+        &.active {
+            border: 2px solid $secondary-color2;
+        }
+    }
+    &:nth-child(3) {
+        .top {
+            background-color: $main-color1;
+        }
+        &.active {
+            border: 2px solid $main-color2;
+        }
+        color: white;
+    }
+}
+
+.top {
+    color: inherit;
+    position: relative;
+    min-height: 132px;
+    padding: 30px 30px 0;
+}
+
+.name {
+    color: inherit;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.about {
+    color: inherit;
+    font-size: 18px;
+}
+
+.img {
+    top: 15px;
+    right: 10px;
+    position: absolute;
+}
+
+.bottom {
+    position: relative;
+    flex-grow: 1;
+    min-height: 404px;
+    padding: 30px 0 24px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.priceBlock {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 10px;
+}
+
+.discount {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.installment {
+    font-size: 18px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.includeHeading {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.include {
+    margin-bottom: 55px;
+}
+
+.includeItem {
+    display: flex;
+    gap: 8px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    &::before {
+        content: url('./check.png');
+    }
+}
+
+.btnWrapper {
+    padding-right: 30px;
+}
+
+.btnCurrent {
+    @include btn();
+    padding: 17px 0;
+    color: $main-color1;
+    background: #D2D2D2;
+    width: 100%;
+    font-size: 20px;
+}
+
+.btnDif {
+    @include btn();
+    padding: 17px 0;
+    width: 100%;
+    font-size: 20px;
+}
+
+.current {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border-radius: 10px;
+    background: #3BA5E0;
+    padding: 4px 13px;
+    color: $main-color2;
+    font-size: 14px;
+}
+
+@media (max-width: 1340px) {
+    .img {
+        top: 7px;
+        height: 70px;
+        img {
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 1110px) {
+    .tariff {
+        width: 48%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .tariff {
+        width: 100%;
+    }
+
+    .top {
+        padding: 30px 24px 0;
+    }
+
+    .img {
+        height: 60px;
+    }
+
+    .bottom {
+        padding: 20px 0 31px 24px;
+        min-height: 380px;
+    }
+
+    .include {
+        margin-bottom: 39px;
+    }
+
+    .includeHeading {
+        font-size: 18px;
+    }
+
+    .includeItem {
+        font-size: 16px;
+        gap: 6px;
+    }
+
+    .btnDif, .btnCurrent {
+        font-size: 18px;
+    }
+
+    .btnWrapper {
+        padding-right: 24px;
+    }
+
+    .current {
+        display: none;
+    }
+}

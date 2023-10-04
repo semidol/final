@@ -1,0 +1,56 @@
+@import './../../variables.scss';
+
+.main {
+    flex-grow: 1;
+    padding: 69px 0 80px;
+}
+
+.wrapper {
+    gap: 50px;
+    display: flex;
+    position: relative;
+}
+
+.heading {
+    font-family: 'Ferry black', sans-serif;
+    font-size: 40px;
+    max-width: 800px;
+}
+
+.bg {
+    position: absolute;
+    top: 190px;
+    left: 112px;
+}
+
+@media (max-width: 951px) {
+    .main {
+        padding: 31px 0 80px;
+    }
+
+    .wrapper {
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bg {
+        position: static;
+    }
+
+    .heading {
+        margin-bottom: 126px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .heading {
+        font-size: 22px;
+    }
+
+    .bg {
+        img {
+            width: 100%;
+        }
+    }
+}

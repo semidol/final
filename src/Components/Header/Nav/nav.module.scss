@@ -1,0 +1,26 @@
+@import './../../../variables.scss';
+
+.nav {
+    display: flex;
+    gap: 49px;
+    align-items: center;
+}
+
+.link {
+    font-size: 14px;
+    transition: all 0.3s ease;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .nav {
+        flex-direction: column;
+        gap: 26px;
+    }
+    .link {
+        font-size: 16px;
+        color: $main-color2;
+    }
+}

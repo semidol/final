@@ -1,0 +1,48 @@
+@import './../../variables.scss';
+
+.footer {
+    background-color: $main-color3;
+}
+
+.wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    text-align: end;
+}
+
+.infoItem {
+    display: block;
+    color: $main-color2;
+    font-size: 14px;
+}
+
+.copyright {
+    color: $main-color2;
+    font-size: 14px;
+    margin-top: 21px;
+}
+
+@media (max-width: 767.98px) {
+    .footer {
+        padding: 25px 0;
+    }
+
+    .wrapper {
+        align-items: start;
+    }
+
+    .img {
+        top: -35px;
+        position: relative;
+        width: 111px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+

@@ -1,0 +1,103 @@
+@import './../../../variables.scss';
+
+.user {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.nameOut {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    top: -2px;
+}
+
+.name {
+    font-size: 14px;
+}
+
+.out {
+    opacity: 0.4;
+    cursor: pointer;
+    font-size: 10px;
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.imgContainer {
+    width: 32px;
+    border-radius: 50%;
+    img: {
+        width: 100%;
+    }
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.reg {
+    font-size: 14px;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.line {
+    background-color: $main-color3;
+    opacity: 0.6;
+    width: 2px;
+    height: 26px;
+}
+
+.log {
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 12px;
+    background-color: $secondary-color2;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.04);
+        // background-color: $main-color3;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .name {
+        color: $main-color2;
+        font-size: 16px;
+    }
+    
+    .out {
+        font-size: 12px;
+        color: $main-color2;
+    }
+
+    .auth {
+        flex-direction: column;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .reg {
+        font-size: 16px;
+        color: $main-color2;
+    }
+
+    .log {
+        font-size: 20px;
+        padding: 14px 117px;
+    }
+}

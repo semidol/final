@@ -1,0 +1,101 @@
+@import './../../variables.scss';
+
+.logoContainer {
+    flex-grow: 1;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.navUser {
+    flex-grow: 1;
+    justify-content: space-between;
+    display: flex;
+}
+
+.why {
+    &__heading {
+        font-family: 'Ferry black', sans-serif;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .logoContainer {
+        flex-grow: 0;
+    }
+
+    .wrapper {
+        justify-content: space-between;
+    }
+
+    .navUser {
+        z-index: 100;
+        flex-direction: column;
+        background-color: $main-color3;
+        top: 0;
+        left: -100%;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        gap: 75px;
+        transition: all 0.3s ease;
+        &.active {
+            left: 0;
+        }
+    }
+    .whiteLogoContainer {
+        position: absolute;
+        top: 2px;
+        left: 10px;
+    }
+
+    .burger {
+        width: 30px;
+        height: 25px;
+        position: relative;
+        z-index: 200;
+        display: block;
+    }
+
+    .burgerLine {
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 30px;
+        height: 5px;
+        transition: all 0.3s ease;
+        background-color: $main-color3;
+        &::after, &::before {
+            transition: all 0.3s ease;
+            display: block;
+            width: 30px;
+            height: 5px;
+            content: '';
+            background-color: $main-color3;
+            position: absolute;
+        }
+        &::after {
+            top: 20px;
+        }
+        &::before {
+            top: 10px
+        }
+        &.active {
+            background-color: transparent;
+            &::before {
+                top: 10px;
+                transform: rotate(-45deg);
+                background-color: $main-color2;
+            }
+            &::after {
+                top: 10px;
+                background-color: $main-color2;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

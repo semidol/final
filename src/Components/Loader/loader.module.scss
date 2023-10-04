@@ -1,0 +1,15 @@
+@keyframes loader {
+    from {
+        transform: rotate(0 deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    img {
+        animation: loader 2s linear infinite;
+    }
+    
+}

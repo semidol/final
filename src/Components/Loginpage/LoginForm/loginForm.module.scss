@@ -1,0 +1,155 @@
+@import './../../../variables.scss';
+
+.formBlock {
+    position: relative;
+    padding: 25px 25px 39px;
+    flex-basis: 422px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.logReg {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.log {
+    width: 38%;
+    padding-bottom: 8px;
+    text-align: center;
+    color: $main-color3;
+    font-size: 16px;
+    border-bottom: 2px solid $main-color3;
+    cursor: auto;
+}
+
+.reg {
+    cursor: pointer;
+    width: 58%;
+    padding-bottom: 8px;
+    text-align: center;
+    color: #C7C7C7;
+    font-size: 16px;
+    border-bottom: 2px solid #C7C7C7;
+    transition: all 0.3s ease;
+    &:hover {
+        color: $main-color3;
+        border-bottom: 2px solid $main-color3;
+    }
+}
+
+.label {
+    color: #949494;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.labelWrong {
+    &:after {
+        content: 'Неправильный логин или пароль';
+        position: absolute;
+        top: 80px;
+        left: 0;
+        color: #FF5959;
+        font-size: 14px;
+    }
+}
+
+.input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #C7C7C7;
+    font-size: 16px;
+    padding: 11px 19px;
+    margin-bottom: 20px;
+}
+
+.inputWrong {
+    border: 1px solid #FF5959;
+    box-shadow: 0px 0px 20px 0px rgba(255, 89, 89, 0.20);
+}
+
+.btn {
+    @include btn();
+    margin-top: 10px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 16px 0;
+    margin-bottom: 15px;
+}
+
+.btnDisable {
+    opacity: 0.7;
+    cursor: auto;
+    &:hover {
+        transform: none;
+    }
+}
+
+.recover {
+    display: block;
+    color: $secondary-color3;
+    font-size: 14px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.altLog {
+    color: #949494;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.altLogBlock {
+    display: flex;
+    gap: 10px;
+}
+
+.lock {
+    position: absolute;
+    top: -55px;
+    left: -51px;
+}
+
+@media (max-width: 951px) {
+    .formBlock {
+        width: 430px;
+        margin-bottom: 50px;
+    }
+    
+    .lock {
+        top: -81px;
+        left: 81px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .formBlock {
+        width: auto;
+    }
+
+    .log {
+        font-size: 14px;
+    }
+
+    .reg {
+        font-size: 14px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+
+    .altLogBlock {
+        flex-wrap: wrap;
+    }
+}
