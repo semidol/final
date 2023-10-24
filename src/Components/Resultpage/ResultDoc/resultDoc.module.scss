@@ -1,0 +1,125 @@
+@import './../../../variables.scss';
+
+.doc {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.20);    
+    padding: 19px 30px 35px;
+    margin-bottom: 30px;
+}
+
+.dateSource {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.date {
+    color: #949494;
+    font-size: 16px;
+}
+
+.source {
+    color: #949494;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.heading {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.genre {
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    padding: 4px 12px;
+    background-color: $secondary-color1;
+}
+
+.img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.text {
+    font-size: 16px;
+    opacity: 0.5;
+    margin-bottom: 32px;
+    flex-grow: 1
+}
+
+.btn {
+    @include btn();
+    padding: 14px 30px;
+    background-color: $secondary-color2;
+    color: $main-color1;
+    font-size: 16px;
+}
+
+.countWords {
+    position: absolute;
+    bottom: 35px;
+    right: 28px;
+    color: #949494;
+    font-size: 16px;
+}
+
+@media (max-width: 809px) {
+    .countWords {
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .doc {
+        width: 100%;
+        padding: 19px 14px 18px 24px;
+    }
+
+    .dateSource {
+        gap: 9px;
+        margin-bottom: 21px;
+    }
+
+    .source, .date {
+        font-size: 14px;
+    }
+
+    .heading {
+        font-size: 19px;
+        margin-bottom: 20px;
+    }
+
+    .genre {
+        font-size: 10px;
+        margin-bottom: 13px;
+    }
+
+    .text {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .countWords {
+        font-size: 14px;
+        right: 14px;
+        bottom: 18px;
+    }
+}

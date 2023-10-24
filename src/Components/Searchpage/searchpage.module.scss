@@ -1,0 +1,98 @@
+@import './../../variables.scss';
+
+.main {
+    flex-grow: 1;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    padding: 69px 0 64px;
+    position: relative;
+}
+
+.heading {
+    font-family: 'Ferry black', sans-serif;
+    font-size: 40px;
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.desc {
+    max-width: 534px;
+    font-size: 20px;
+    margin-bottom: 47px;
+}
+
+.form {
+    max-width: 872px;
+}
+
+.bg1 {
+    position: absolute;
+    top: 132px;
+    right: 340px;
+}
+
+.bg2 {
+    position: absolute;
+    top: 150px;
+    right: 34px;
+}
+
+.bg3 {
+    position: absolute;
+    top: 351px;
+    right: -70px;
+}
+
+@media (max-width: 1263.98px) {
+    .form {
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    .bg1 {
+        width: 58px;
+        right: 70px;
+        img {
+            width: 100%;
+        }
+    }
+    .bg2 {
+        display: none;
+    }
+
+    .bg3 {
+        text-align: center;
+        position: static;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .form {
+        position: relative;
+        width: calc(100% + 20px);
+        left: -10px;
+    }
+    .heading {
+        font-size: 28px;
+        margin-bottom: 19px;
+    }
+
+    .desc {
+        font-size: 18px;
+        margin-bottom: 21px;
+    }
+
+    .bg3 {
+        width: 420px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .bg1 {
+        z-index: -1;
+        top: 150px;
+        right: 10px;
+    }
+}

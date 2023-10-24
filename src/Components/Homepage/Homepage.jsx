@@ -14,6 +14,7 @@ import { useWindowWidth } from '../../hooks';
 import bg2 from './img/bg2.svg'
 import Tariff from './Tariff/Tariff';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const dataTariff = [
   {
@@ -59,7 +60,7 @@ export default function Homepage() {
           <div className={style.about__wrapper}>
             <h1 className={style.about__heading}>сервис по поиску <br/> публикаций <br/> о компании <br/> по его ИНН</h1>
             <p className={style.about__text}>Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.</p>
-            {isAuth && <button className={style.about__btn}>Запросить данные</button>}
+            {isAuth && <Link to='/search'><button className={style.about__btn}>Запросить данные</button></Link>}
             <div className={style.about__img}>
               <img src={bg} alt="bg" />
             </div>

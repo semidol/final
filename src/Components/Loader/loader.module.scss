@@ -8,8 +8,9 @@
 }
 
 .loader {
+    width: 100%;
     img {
+        width: 100%;
         animation: loader 2s linear infinite;
     }
-    
 }

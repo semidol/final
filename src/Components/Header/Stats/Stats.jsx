@@ -41,7 +41,8 @@ export default function Stats() {
   return (
     <div>
       {isAuth && <div className={false ? style.stats : [style.stats, style.load].join(' ')}>
-        {!isLoad ? <ul className={style.list}>
+        {!isLoad ? 
+        <ul className={style.list}>
           <li className={style.item}>
             Использовано компаний
             <span className={style.used}>{stats.used}</span>
@@ -50,8 +51,9 @@ export default function Stats() {
             Лимит по компаниям
             <span className={style.limit}>{stats.limit}</span>
           </li>
-        </ul> :
-        <Loader />}
+        </ul>
+        :
+        <div className={style.loader}><Loader /></div>}
       </div>}
     </div>
   )
